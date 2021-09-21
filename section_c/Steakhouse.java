@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Steakhouse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.printf("Steak type: ");
         int typeNum = sc.nextInt();
+
         System.out.printf("Cooking degree: ");
         int degreeNum = sc.nextInt();
+
         System.out.printf("Side order: ");
         int sideNum = sc.nextInt();
 
@@ -39,15 +42,15 @@ public class Steakhouse {
 
         if(side == "Potatoes") {
             System.out.printf("Potatoe type: ");
-            int pt = sc.nextInt();
+            int potatoeTypeNum = sc.nextInt();
 
-            pType = setPotatoType(pt);
+            pType = setPotatoType(potatoTypeNum);
 
             if (pType == "Baked potatoes"){
                 System.out.printf("Potatoe topping: ");
-                int ptt = sc.nextInt();
+                int potatoeToppingNum = sc.nextInt();
 
-                topping = setTopping(ptt);
+                topping = setTopping(potatoeToppingNum);
 
                 System.out.printf("\n%s, %s, %s, %s", type, degree, pType, topping);
                 return;
@@ -59,15 +62,14 @@ public class Steakhouse {
 
         System.out.printf("\n%s, %s, %s", type, degree, side);
 
-
         sc.close();
-
     }
 
 
 
     private static String setCookingDegree(int num) {
         String degree;
+
             switch(num){
                 case 1:
                     degree="rare";
@@ -93,6 +95,7 @@ public class Steakhouse {
 
     private static String setSideOrder(int num) {
         String side;
+
         switch(num) {
             case 1:
                 side = "Bread";
