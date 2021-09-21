@@ -44,7 +44,7 @@ public class Steakhouse {
             System.out.printf("Potatoe type: ");
             int potatoeTypeNum = sc.nextInt();
 
-            pType = setPotatoType(potatoTypeNum);
+            pType = setPotatoType(potatoeTypeNum);
 
             if (pType == "Baked potatoes"){
                 System.out.printf("Potatoe topping: ");
@@ -53,10 +53,12 @@ public class Steakhouse {
                 topping = setTopping(potatoeToppingNum);
 
                 System.out.printf("\n%s, %s, %s, %s", type, degree, pType, topping);
+                sc.close();
                 return;
             }
             
             System.out.printf("\n%s, %s, %s", type, degree, pType);
+            sc.close();
             return;
         }
 

@@ -6,6 +6,7 @@ public class InputLoop {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = 1;
+        sc.close();
 
         while(num >= 1 ) {
             System.out.printf(": ");

@@ -14,6 +14,7 @@ public class Artikelnummern {
 
         check = checkArticleGroup(articleGroup);
         if(check==false){
+            sc.close();
             return;
         }
 
@@ -23,6 +24,7 @@ public class Artikelnummern {
 
         check = checkSecondaryGroup(articleGroup, secondaryGroup);
         if(check == false) {
+            sc.close();
             return;
         }
 

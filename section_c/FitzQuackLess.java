@@ -8,6 +8,7 @@ public class FitzQuackLess {
         System.out.printf(": ");
         int num = sc.nextInt();
 
+        sc.close();
         for(int i=1; i<=num; i++) {
 
                 System.out.printf("%d ", i);

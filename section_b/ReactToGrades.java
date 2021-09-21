@@ -7,6 +7,7 @@ public class ReactToGrades {
         Scanner sc = new Scanner(System.in);
         int grade = sc.nextInt();
 
+        sc.close();
 
         if (grade < 1 || grade > 5)
         {

@@ -4,7 +4,7 @@ public class GradeValidator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int grade = sc.nextInt();
-
+        sc.close();
         if (grade > 0 && grade < 6)
         {
             System.out.printf("is valid!");

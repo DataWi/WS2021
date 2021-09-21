@@ -14,6 +14,8 @@ public class Classifier {
         System.out.printf("enter quality: ");
         int quality = sc.nextInt();
 
+        sc.close();
+        
         boolean highPrice = checkPrice(price);
         boolean highQuality = checkQuality(quality);
 

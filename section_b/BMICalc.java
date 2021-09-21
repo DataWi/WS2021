@@ -11,6 +11,7 @@ public class BMICalc {
 
         double bmi = mass/(height*height);
 
+        sc.close();
 
         if (bmi <= 15.00){
             System.out.printf("Very severely underweight %d",bmi);
