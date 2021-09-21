@@ -40,6 +40,7 @@ public class Steakhouse {
         if(side == "Potatoes") {
             System.out.printf("Potatoe type: ");
             int pt = sc.nextInt();
+
             pType = setPotatoType(pt);
 
             if (pType == "Baked potatoes"){
@@ -47,9 +48,11 @@ public class Steakhouse {
                 int ptt = sc.nextInt();
 
                 topping = setTopping(ptt);
-                System.out.printf("\n%s, %s, %s, %s", type,degree,  pType, topping);
+
+                System.out.printf("\n%s, %s, %s, %s", type, degree, pType, topping);
                 return;
             }
+            
             System.out.printf("\n%s, %s, %s", type, degree, pType);
             return;
         }
@@ -63,9 +66,9 @@ public class Steakhouse {
 
 
 
-    private static String setCookingDegree(int i) {
+    private static String setCookingDegree(int num) {
         String degree;
-            switch(i){
+            switch(num){
                 case 1:
                     degree="rare";
                     break;
@@ -100,6 +103,7 @@ public class Steakhouse {
             default:
                 side = "Bread";
         }
+
         return side;
     }
 
