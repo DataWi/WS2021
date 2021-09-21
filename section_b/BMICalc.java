@@ -42,8 +42,6 @@ public class BMICalc {
             return;
         }
 
-
-
         System.out.printf("Very severely obese");
 
     }
