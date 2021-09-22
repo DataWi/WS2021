@@ -20,10 +20,7 @@ public class MinMaxSumOf4Of5 {
         biggest = tmp;
         num = tmp;
         
-        for (int i = 0; i<numbers.length; i++) { 
-            if (i == 0) {
-                continue;
-            }
+        for (int i = 1; i<numbers.length; i++) { 
             int temp = Integer.parseInt(numbers[i]);
             smallest = temp < tmp ? temp : tmp;
             biggest = temp > tmp ? temp: tmp;
