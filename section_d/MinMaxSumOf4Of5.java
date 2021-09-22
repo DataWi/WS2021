@@ -6,30 +6,26 @@ public class MinMaxSumOf4Of5 {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int num, tmp, smallest, biggest;
-        String line;
-    
-        System.out.printf(": ");
-        line = sc.nextLine();
-        sc.close();
+        int sum, tmp, smallest, biggest;
 
-        String[] numbers = line.split(" ");
-        
-        tmp = Integer.parseInt(numbers[0]);
+        System.out.printf(": ");
+
+        tmp = sc.nextInt();
         smallest = tmp;
         biggest = tmp;
-        num = tmp;
+        sum = tmp;
         
-        for (int i = 1; i<numbers.length; i++) { 
-            int temp = Integer.parseInt(numbers[i]);
+        for (int i = 1; i<5; i++) { 
+            int temp = sc.nextInt();
             smallest = temp < tmp ? temp : tmp;
             biggest = temp > tmp ? temp: tmp;
-            num=num+temp;
+            sum=sum+temp;
         }
+        
+        sc.close();
 
-
-        System.out.printf("minimum sum: %d\n", num-biggest);
-        System.out.printf("maximum sum: %d", num-smallest);
+        System.out.printf("minimum sum: %d\n", sum-biggest);
+        System.out.printf("maximum sum: %d", sum-smallest);
 
     }
 }
