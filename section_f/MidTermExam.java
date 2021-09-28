@@ -57,7 +57,6 @@ public class MidTermExam {
             if(normalizedMinutes <= running){
                 if(normalizedMinutes == 0) {
                 System.out.printf("gehen\n");
-                continue;
                 }
                 System.out.printf("laufen\n");
             } else {
