@@ -1,4 +1,4 @@
-package ws2021.section_f;
+package ws2021.tests;
 
 import java.util.Scanner;
 
