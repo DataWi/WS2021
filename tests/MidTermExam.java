@@ -7,11 +7,11 @@ public class MidTermExam {
         Scanner sc = new Scanner(System.in);
         System.out.printf(": ");
         int running = sc.nextInt();
+        running=validateNumber(running, sc);
         System.out.printf(": ");
         int walking = sc.nextInt();
-
-        running=validateNumber(running, sc);
         walking=validateNumber(walking, sc);
+
     
         printIntervall(running, walking, sc);
 
