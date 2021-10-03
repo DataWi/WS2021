@@ -1,11 +1,13 @@
 package ws2021.section_e.simple_functions_1;
 
 public class Printing {
+    
     public static void print(){
         System.out.printf("Please enter a name:");
     }
 
     public static void print(String name){
+        print();
         System.out.printf("Welcome %s! Please enter two numbers:", name);
     }
 
