@@ -2,6 +2,8 @@ package ws2021.section_f.simple_functions_2;
 
 import java.util.Scanner;
 
+// This works in an IDE; but not in moodle, for some reason.
+
 public class Hangman {
     public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -43,11 +45,11 @@ public class Hangman {
 
     public static String getGuess(Scanner sc, String guessedChars) {
         System.out.printf("Guess: ");
-        String character = sc.nextLine();
+        String character = sc.next();
 
         while (character.length() > 1 || (guessedChars != " " && guessedChars.contains(character)) ) {
             System.out.printf("Guess again: ");
-            character = sc.nextLine();
+            character = sc.next();
         }
 
         return character;
@@ -66,6 +68,6 @@ public class Hangman {
             System.out.printf("You LOSE! No lives are left.\n");
         }
         
-        System.out.printf("The word was: %s", word);
+        System.out.printf("The word was:%s", word);
     }
 }

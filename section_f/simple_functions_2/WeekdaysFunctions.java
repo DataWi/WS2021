@@ -2,7 +2,6 @@ package ws2021.section_f.simple_functions_2;
 
 import java.util.Scanner;
 
-// calculations here seem to be wrong.
 
 public class WeekdaysFunctions {
 
@@ -114,9 +113,11 @@ public class WeekdaysFunctions {
 
     public static int weekday(int inDay, int inMonth, int inYear) {
         int day;
-        int y=inYear%100;
-        int c=inYear/100;
-        int m=inMonth < 3 ? inMonth+10 : inMonth-2;
+        // If month is January or February, it actually belongs to the last year. 
+        // This is handled by ternary expression inMonth < 3 ? year -1 : year
+        int y=inMonth < 3? (inYear - 1)%100 : inYear%100; 
+        int c=inMonth <3 ? (inYear - 1)/100 : inYear/100;
+        int m=inMonth < 3 ? inMonth + 10 : inMonth - 2;
 
         // use double for calculations with double values
         double monthCalc = 2.6*m - 0.2;
